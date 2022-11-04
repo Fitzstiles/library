@@ -1,0 +1,30 @@
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.Container p {
+    color: black;
+}
+
+.Container :nth-child(3) {
+    background-color: #C15B33;
+    padding: 8px 80px;
+    border-radius: 10px;
+}
+
+.Container :nth-child(4) {
+    color: #C15B33;
+    margin-top: 10px;
+}
+
+
+/* @media screen and (max-width:800px) {
+    .Container img {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+} */
