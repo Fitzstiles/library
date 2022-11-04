@@ -41,13 +41,15 @@
 /* Styling the login page */
 .login {
     color: black;
-    display: flex;
-    justify-content: center;
+}
+
+.header__section {
+    margin: 70px 20px;
 }
 
 .login__image {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin-top: 20px;
     margin-bottom: 40px;
 }
@@ -58,7 +60,24 @@
     object-fit: cover;
 }
 
+.image__section {
+    display: flex;
+    justify-content: center;
+}
 
+.input__section p {
+    font-size: small;
+    font-weight: 500;
+}
 
+.input__section input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+}
+
+.email input {
+    margin-bottom: 10px;
+}
 
 /* Styling the login page end */
