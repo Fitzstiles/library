@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
+import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useState } from "react";
 const Login = () => {
   const [passwordShown, setPasswordShown] = useState(false);
@@ -33,9 +34,11 @@ const Login = () => {
         <div className={styles.password}>
           <p>Password?</p>
           <input type={passwordShown ? "text" : "password"} />
-          <RemoveRedEyeOutlinedIcon onClick={togglePassword} />
-          <br />
-          <Link href="/">Forgot Password ?</Link>
+          {passwordShown ? (
+            <RemoveRedEyeOutlinedIcon onClick={togglePassword} />
+          ) : (
+            <VisibilityOffIcon onClick={togglePassword} />
+          )}
         </div>
       </div>
 
