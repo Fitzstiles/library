@@ -129,6 +129,45 @@
 }
 
 
-
-
 /* Styling the login page end */
+
+/* styling the input section */
+.books__input__section {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 10px 5px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.books__input__section input {
+    width: 90%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 10px;
+}
+
+.books__input__section input::placeholder {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styling the input section ends */
