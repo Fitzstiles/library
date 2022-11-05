@@ -38,6 +38,7 @@ const Login = () => {
           <Link href="/forgotpassword">Forgot Password ?</Link>
         </div>
       </div>
+<<<<<<< HEAD
 
       <div className={styles.final__section}>
         <button>Log in</button>
@@ -46,6 +47,11 @@ const Login = () => {
           Don&#39;t have an Account yet? <Link href="/signup">Sign up</Link>
         </span>
       </div>
+=======
+      <button>Login</button>
+      <br />
+      <span>Don&#39;t have an Account?</span> <Link href="/signup">Sign up</Link>
+>>>>>>> fa35daf4e64d9ef977c3a24b945b7914f1725a50
     </div>
   );
 };
