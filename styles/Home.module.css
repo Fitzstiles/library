@@ -147,6 +147,7 @@
     outline: none;
     background: transparent;
     padding-left: 10px;
+    color: white;
 }
 
 .books__input__section input::placeholder {

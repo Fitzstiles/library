@@ -5,8 +5,8 @@ const Books = () => {
   return (
     <div>
       <div className={styles.books__input__section}>
-        <input type="text" placeholder="Type Book name or Author her" />
-        <SearchOutlinedIcon style={{ color: "black" }} />
+        <input type="text" placeholder="Type Book name or Author here" />
+        <SearchOutlinedIcon style={{ color: "#C15B33" }} />
       </div>
 
       <Book title="Popular" />
