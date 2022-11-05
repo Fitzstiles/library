@@ -29,7 +29,7 @@ const Login = () => {
       </div>
       <button>Login</button>
       <br />
-      <span>Don't have an Account?</span> <Link href="/signup">Sign up</Link>
+      <span>Don&#39;t have an Account?</span> <Link href="/signup">Sign up</Link>
     </div>
   );
 };
