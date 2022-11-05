@@ -46,7 +46,7 @@ const Login = () => {
         <button>Sign up</button>
         <br />
         <span>
-          Already Have an Account ? <Link href="/login">login</Link>
+          Already Have an Account ? <Link href="/login">Login</Link>
         </span>
       </div>
     </div>

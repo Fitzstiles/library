@@ -20,10 +20,7 @@ const Login = () => {
       </div>
       <div className={styles.image__section}>
         <div className={styles.login__image}>
-          <img
-            src="https://cheapwritingservice.com/images/img_girl-flying-books.svg"
-            alt=""
-          />
+          <img src="../images/01.svg" alt="" />
         </div>
       </div>
       <div className={styles.input__section}>
