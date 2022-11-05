@@ -3,7 +3,7 @@ const Book = ({ title }) => {
   return (
     <div className={styles.book__container}>
       <h1>{title}</h1>
-      {/* <div className={styles.book__details}>
+      <div className={styles.book__details}>
         <div className={styles.book__row}>
           <div className={styles.image__container}>
             <img
@@ -154,7 +154,7 @@ const Book = ({ title }) => {
           <p>Rich Dad poor dad</p>
           <p>by Rober T kiyoseki</p>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
