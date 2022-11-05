@@ -35,7 +35,7 @@ const Login = () => {
           <input type={passwordShown ? "text" : "password"} />
           <RemoveRedEyeOutlinedIcon onClick={togglePassword} />
           <br />
-          <Link href="/forgotpassword">Forgot Password ?</Link>
+          <Link href="/">Forgot Password ?</Link>
         </div>
       </div>
 
