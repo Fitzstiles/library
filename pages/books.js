@@ -4,8 +4,6 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { useState } from "react";
 
 const Books = ({ data }) => {
-  const datas = data.items;
-
   const [search, setSearch] = useState("");
   const searchBook = (e) => {
     e.preventDefault();
@@ -13,14 +11,11 @@ const Books = ({ data }) => {
       setSearch("");
     };
     resetInputField();
-    console.log(search);
+    alert(search);
     // AIzaSyBXKk0SslCsOfRiy9nXDq5LpojvH8UBLvM
   };
   return (
     <div>
-      {datas.map((dat) => {
-        console;
-      })}
       <div className={styles.books__input__section}>
         <input
           type="text"
