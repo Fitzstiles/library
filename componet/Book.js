@@ -7,7 +7,7 @@ const Book = ({ title }) => {
         <div className={styles.book__row}>
           <div className={styles.image__container}>
             <img
-              src="https://m.media-amazon.com/images/I/51u8ZRDCVoL._AC_SY780_.jpg"
+              src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348956234l/13465.jpg"
               alt=""
             />
           </div>
