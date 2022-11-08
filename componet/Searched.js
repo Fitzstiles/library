@@ -1,8 +1,6 @@
 import styles from "../componet/Book.module.css";
 const SearchedBooks = ({ toggleViewMode }) => {
-  const contentClassName = toggleViewMode
-    ? styles.Search__book__container
-    : styles.background;
+  const contentClassName = toggleViewMode ? styles.background : styles.closed;
   return (
     <div className={contentClassName}>
       <div className={styles.Search__book__container}>

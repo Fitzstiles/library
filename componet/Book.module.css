@@ -60,19 +60,15 @@
 .Search__book__container {
     display: flex;
     justify-content: center;
-
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
-
-
 }
 
 .searched__books {
     margin-top: 30px;
     text-align: center;
     width: 200px;
-    /* height: 300px; */
 }
 
 .searched_image__container {
@@ -88,17 +84,22 @@
     border-radius: 5px;
 }
 
-/* @media screen and (max-width:480px) {
-
-    .Search__book__container {
-        flex-direction: column;
+@media screen and (max-width:440px) {
+    .searched__books {
+        width: 150px;
     }
 
     .searched_image__container {
-        width: 100px;
+        width: 150px;
     }
-} */
 
+    .searched_image__container img {
+        object-fit: contain;
+    }
 
+    .Search__book__container {
+        gap: 0;
+    }
+}
 
 /* Styling Search Books Ends */
