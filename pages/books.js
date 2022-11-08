@@ -16,7 +16,7 @@ const Books = ({ data }) => {
     // AIzaSyBXKk0SslCsOfRiy9nXDq5LpojvH8UBLvM
   };
   return (
-    <div>
+    <form onSubmit={searchBook}>
       <div className={styles.books__input__section}>
         <input
           type="text"
@@ -25,12 +25,15 @@ const Books = ({ data }) => {
           onChange={(e) => setSearch(e.target.value)}
         />
         <SearchOutlinedIcon style={{ color: "#C15B33" }} onClick={searchBook} />
+        <button type="submit" style={{ display: "none" }}>
+          search
+        </button>
       </div>
       <Book title="Popular" />
       <Book title="Best Selling" />
       <Book title="Recommeded" />
       <SearchedBooks />
-    </div>
+    </form>
   );
 };
 
