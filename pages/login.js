@@ -32,9 +32,9 @@ const Login = () => {
           <p>Password?</p>
           <input type={passwordShown ? "text" : "password"} />
           {passwordShown ? (
-            <RemoveRedEyeOutlinedIcon onClick={togglePassword} />
-          ) : (
             <VisibilityOffIcon onClick={togglePassword} />
+          ) : (
+            <RemoveRedEyeOutlinedIcon onClick={togglePassword} />
           )}
         </div>
       </div>

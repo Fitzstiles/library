@@ -2,6 +2,7 @@ import Book from "../componet/Book";
 import styles from "../styles/Home.module.css";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { useState } from "react";
+import SearchedBooks from "../componet/Searched";
 
 const Books = ({ data }) => {
   const [search, setSearch] = useState("");
@@ -28,6 +29,7 @@ const Books = ({ data }) => {
       <Book title="Popular" />
       <Book title="Best Selling" />
       <Book title="Recommeded" />
+      <SearchedBooks />
     </div>
   );
 };
