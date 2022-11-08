@@ -41,10 +41,63 @@
 
 
 /* Styling Search Books */
-.Search__book__container {
+
+.closed {
+    display: none;
+}
+
+.background {
+    background-color: white;
+    height: 140vh;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    top: 150px;
     color: black;
 }
 
+.Search__book__container {
+    display: flex;
+    justify-content: center;
+
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+}
+
+.searched__books {
+    margin-top: 30px;
+    text-align: center;
+    width: 200px;
+    /* height: 300px; */
+}
+
+.searched_image__container {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.searched_image__container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* @media screen and (max-width:480px) {
+
+    .Search__book__container {
+        flex-direction: column;
+    }
+
+    .searched_image__container {
+        width: 100px;
+    }
+} */
 
 
 

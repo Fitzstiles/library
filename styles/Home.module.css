@@ -154,9 +154,9 @@
     color: white;
 }
 
-
-
-
+.books__input__section button {
+    display: none;
+}
 
 
 

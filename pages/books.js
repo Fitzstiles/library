@@ -6,13 +6,19 @@ import SearchedBooks from "../componet/Searched";
 
 const Books = ({ data }) => {
   const [search, setSearch] = useState("");
+  const [toggleViewMode, setToggleViewMode] = useState(false);
+
   const searchBook = (e) => {
     e.preventDefault();
     const resetInputField = () => {
       setSearch("");
     };
     resetInputField();
-    alert(search);
+    if (search === "") {
+      return;
+    } else {
+      alert(search);
+    }
     // AIzaSyBXKk0SslCsOfRiy9nXDq5LpojvH8UBLvM
   };
   return (
@@ -23,16 +29,15 @@ const Books = ({ data }) => {
           placeholder="Type Book name or Author here"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          onClick={() => setToggleViewMode(!toggleViewMode)}
         />
         <SearchOutlinedIcon style={{ color: "#C15B33" }} onClick={searchBook} />
-        <button type="submit" style={{ display: "none" }}>
-          search
-        </button>
+        <button type="submit">search</button>
       </div>
       <Book title="Popular" />
       <Book title="Best Selling" />
       <Book title="Recommeded" />
-      <SearchedBooks />
+      <SearchedBooks toggleViewMode={toggleViewMode} />
     </form>
   );
 };
