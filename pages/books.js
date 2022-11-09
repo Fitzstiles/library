@@ -21,6 +21,8 @@ const Books = ({ data }) => {
     }
     // AIzaSyBXKk0SslCsOfRiy9nXDq5LpojvH8UBLvM
   };
+
+  const HandleCloseOnClicked = () => setToggleViewMode(false);
   return (
     <form onSubmit={searchBook}>
       <div className={styles.books__input__section}>
@@ -29,7 +31,7 @@ const Books = ({ data }) => {
           placeholder="Type Book name or Author here"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          onClick={() => setToggleViewMode(!toggleViewMode)}
+          onClick={() => setToggleViewMode(true)}
         />
         <SearchOutlinedIcon style={{ color: "#C15B33" }} onClick={searchBook} />
         <button type="submit">search</button>
@@ -37,7 +39,10 @@ const Books = ({ data }) => {
       <Book title="Popular" />
       <Book title="Best Selling" />
       <Book title="Recommeded" />
-      <SearchedBooks toggleViewMode={toggleViewMode} />
+      <SearchedBooks
+        toggleViewMode={toggleViewMode}
+        close={HandleCloseOnClicked}
+      />
     </form>
   );
 };
