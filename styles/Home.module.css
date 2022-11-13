@@ -132,6 +132,11 @@
 /* Styling the login page end */
 
 /* styling the input section */
+
+/* .book___container {
+    height: 100%;
+} */
+
 .books__input__section {
     display: flex;
     align-items: center;
@@ -158,7 +163,15 @@
     display: none;
 }
 
+.book___container {
+    height: 100vh;
+    overflow-y: hidden;
+}
 
+.options {
+    height: 90%;
+    overflow-y: scroll;
+}
 
 
 

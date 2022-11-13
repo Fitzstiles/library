@@ -1,3 +1,5 @@
+/* styling the Book Component */
+
 .book__container {
     color: black;
 }
@@ -13,7 +15,6 @@
     display: flex;
     width: 100vw;
     overflow-x: scroll;
-
 }
 
 .book__row {
@@ -38,9 +39,10 @@
     object-fit: cover;
 }
 
+/* styling the Book component ends */
 
 
-/* Styling Search Books */
+/* styling the search books page */
 
 .closed {
     display: none;
@@ -48,8 +50,8 @@
 
 .background {
     background-color: white;
-    height: 140vh;
-    position: absolute;
+    height: 100%;
+    position: fixed;
     z-index: 1;
     right: 0;
     left: 0;
@@ -57,12 +59,23 @@
     color: black;
 }
 
-.background svg {
+.icon {
+    background-color: white;
+    z-index: 2;
+    height: 20px;
+}
+
+.icon svg {
     color: #C15B33;
     position: absolute;
     right: 60px;
-    top: 20px;
+    top: 10px;
     font-size: 30px;
+}
+
+.background h1 {
+    text-align: center;
+    margin-top: 30px;
 }
 
 .Search__book__container {
@@ -71,10 +84,13 @@
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
+    margin-top: 20px;
+    overflow-x: scroll;
+    height: 60%;
 }
 
 .searched__books {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     width: 200px;
 }
@@ -92,6 +108,18 @@
     border-radius: 5px;
 }
 
+.searched__books :nth-child(3) {
+    color: grey;
+    font-weight: bold;
+    font-size: small;
+}
+
+@media screen and (max-width:1000px) {
+    .Search__book__container {
+        height: 500px;
+    }
+}
+
 @media screen and (max-width:440px) {
     .searched__books {
         width: 150px;
@@ -103,10 +131,12 @@
 
     .searched_image__container img {
         object-fit: contain;
+        margin-right: 30px;
     }
 
     .Search__book__container {
         gap: 0;
+        justify-content: space-evenly;
     }
 
     .background svg {
@@ -114,5 +144,6 @@
         right: 25px;
     }
 }
+
 
 /* Styling Search Books Ends */
