@@ -10,7 +10,7 @@ export const popular = [
     id: 2,
     name: "The Art of War",
     image:
-      "https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781626860605/the-art-of-war-9781626860605_hr.jpg",
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1630683326l/10534._SY475_.jpg",
     author: "Sun Tzu",
   },
   {
@@ -59,14 +59,13 @@ export const popular = [
     id: 9,
     name: "The Light we carry",
     image:
-      "https://images-na.ssl-images-amazon.com/images/I/41HcM1yzHcL._AC_SX184_.jpg",
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1658477208l/61355265.jpg",
     author: "Michelle Obama",
   },
   {
     id: 10,
     name: "So Help Me God",
-    image:
-      "https://images-na.ssl-images-amazon.com/images/I/81MDrZAEsRL._AC_UL127_SR127,127_.jpg",
+    image: "https://images.booksense.com/images/681/153/9781797153681.jpg",
     author: "Mike Pence",
   },
 ];
