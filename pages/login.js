@@ -3,9 +3,23 @@ import styles from "../styles/Home.module.css";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useState } from "react";
+import { useStateValue } from "../context/StateContext";
+import { useRouter } from "next/router";
 const Login = () => {
   const [passwordShown, setPasswordShown] = useState(false);
-
+  const [email, setEmail] = useState();
+  const [password, setpassword] = useState();
+  const { login } = useStateValue();
+  const router = useRouter();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await login(email, password);
+      router.push("/books");
+    } catch (err) {
+      alert(err);
+    }
+  };
   // Password toggle handler
   const togglePassword = () => {
     // When the handler is invoked
@@ -23,24 +37,29 @@ const Login = () => {
           <img src="../images/01.svg" alt="" />
         </div>
       </div>
-      <div className={styles.input__section}>
-        <div className={styles.email}>
-          <p>Email address</p>
-          <input type="email" />
+      <form onSubmit={handleSubmit}>
+        <div className={styles.input__section}>
+          <div className={styles.email}>
+            <p>Email address</p>
+            <input type="email" onChange={(e) => setEmail(e.target.value)} />
+          </div>
+          <div className={styles.password}>
+            <p>Password?</p>
+            <input
+              type={passwordShown ? "text" : "password"}
+              onChange={(e) => setpassword(e.target.value)}
+            />
+            {passwordShown ? (
+              <VisibilityOffIcon onClick={togglePassword} />
+            ) : (
+              <RemoveRedEyeOutlinedIcon onClick={togglePassword} />
+            )}
+          </div>
         </div>
-        <div className={styles.password}>
-          <p>Password?</p>
-          <input type={passwordShown ? "text" : "password"} />
-          {passwordShown ? (
-            <VisibilityOffIcon onClick={togglePassword} />
-          ) : (
-            <RemoveRedEyeOutlinedIcon onClick={togglePassword} />
-          )}
-        </div>
-      </div>
+      </form>
 
       <div className={styles.final__section}>
-        <button>Log in</button>
+        <button onClick={handleSubmit}>Log in</button>
         <br />
         <span>
           Don&#39;t have an Account yet? <Link href="/signup">Sign up</Link>

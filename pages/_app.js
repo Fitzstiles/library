@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Preloader from "../componet/Preloader";
+import { StateContextProvider } from "../context/StateContext";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -10,6 +11,12 @@ function MyApp({ Component, pageProps }) {
     // this was done to give that feeling and should not be done on an actual website
     setTimeout(() => setLoading(true), 3000);
   });
-  return <>{!loading ? <Preloader /> : <Component {...pageProps} />}</>;
+  return (
+    <>
+      <StateContextProvider>
+        {!loading ? <Preloader /> : <Component {...pageProps} />}
+      </StateContextProvider>
+    </>
+  );
 }
 export default MyApp;
