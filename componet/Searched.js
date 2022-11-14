@@ -1,6 +1,5 @@
 import styles from "../componet/Book.module.css";
 import CloseIcon from "@mui/icons-material/Close";
-import Link from "next/link";
 
 const SearchedBooks = ({ toggleViewMode, close, bookData, search }) => {
   const contentClassName = toggleViewMode ? styles.background : styles.closed;
@@ -24,10 +23,13 @@ const SearchedBooks = ({ toggleViewMode, close, bookData, search }) => {
               if (bookimg != undefined) {
                 return (
                   <div key={book.id} className={styles.searched__books}>
-                    <div className={styles.searched_image__container}>
-                      <Link href={book.id}>
-                        <img src={bookimg} alt="" />
-                      </Link>
+                    <div
+                      className={styles.searched_image__container}
+                      onClick={() => {
+                        setShow(true);
+                      }}
+                    >
+                      <img src={bookimg} alt="" />
                     </div>
                     <p>{book.volumeInfo.title}</p>
                     <p>{author}</p>
@@ -36,7 +38,7 @@ const SearchedBooks = ({ toggleViewMode, close, bookData, search }) => {
               }
             })
           ) : (
-            <p>loading...</p>
+            <p>Loading...</p>
           )}
         </div>
       )}

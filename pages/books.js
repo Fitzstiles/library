@@ -4,6 +4,7 @@ import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import { useState } from "react";
 import SearchedBooks from "../componet/Searched";
 import axios from "axios";
+import { popular, BestSelling, Recommeded } from "../data";
 
 const Books = () => {
   const [search, setSearch] = useState("");
@@ -47,9 +48,9 @@ const Books = () => {
         </div>
       </form>
       <div className={styles.options}>
-        <Book title="Popular" />
-        <Book title="Best Selling" />
-        <Book title="Recommeded" />
+        <Book title="Popular" dataItem={popular} />
+        <Book title="Best Selling" dataItem={BestSelling} />
+        <Book title="Recommeded" dataItem={Recommeded} />
       </div>
 
       <SearchedBooks

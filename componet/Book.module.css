@@ -25,6 +25,7 @@
     color: gray;
     font-weight: bold;
     font-size: x-small;
+    margin-top: 10px;
 }
 
 .image__container {
@@ -45,7 +46,8 @@
 /* styling the search books page */
 
 .closed {
-    display: none;
+    position: fixed;
+    transform: translateY(100vh);
 }
 
 .background {
@@ -57,6 +59,8 @@
     left: 0;
     top: 130px;
     color: black;
+    transform: translateY(0);
+    transition: .5s;
 }
 
 .icon {
