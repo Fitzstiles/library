@@ -1,9 +1,15 @@
 import styles from "../componet/Book.module.css";
 import CloseIcon from "@mui/icons-material/Close";
+import BookDetails from "./BookDetails";
+import { useState } from "react";
 
 const SearchedBooks = ({ toggleViewMode, close, bookData, search }) => {
   const contentClassName = toggleViewMode ? styles.background : styles.closed;
-
+  const [toggleDetailsPage, settoggleDetailsPage] = useState(false);
+  const [bookItem, setItem] = useState();
+  const HandleCloseOnClicked = () => {
+    settoggleDetailsPage(false);
+  };
   return (
     <div className={contentClassName}>
       <div className={styles.icon}>
@@ -26,7 +32,8 @@ const SearchedBooks = ({ toggleViewMode, close, bookData, search }) => {
                     <div
                       className={styles.searched_image__container}
                       onClick={() => {
-                        setShow(true);
+                        settoggleDetailsPage(true);
+                        setItem(book);
                       }}
                     >
                       <img src={bookimg} alt="" />
@@ -42,6 +49,11 @@ const SearchedBooks = ({ toggleViewMode, close, bookData, search }) => {
           )}
         </div>
       )}
+      <BookDetails
+        toggleDetailsPage={toggleDetailsPage}
+        close={HandleCloseOnClicked}
+        bookData={bookItem}
+      />
     </div>
   );
 };

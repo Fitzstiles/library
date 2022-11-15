@@ -180,7 +180,7 @@ export const Recommeded = [
     id: 6,
     name: "The Sixth and Seventh Book of Moses",
     image:
-      "https://www.globalgreyebooks.com/content/Images/sixth-and-seventh-books-of-moses-1-large.jpg",
+      "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1567518627l/49627038._SX0_SY0_.jpg",
     author: "Johan Scheibel",
   },
   {

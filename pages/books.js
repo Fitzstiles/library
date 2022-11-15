@@ -6,7 +6,7 @@ import SearchedBooks from "../componet/Searched";
 import axios from "axios";
 import { popular, BestSelling, Recommeded } from "../data";
 
-const Books = () => {
+const Books = ({ results }) => {
   const [search, setSearch] = useState("");
   const [bookData, setbookData] = useState();
   const [toggleViewMode, setToggleViewMode] = useState(false);
@@ -35,7 +35,7 @@ const Books = () => {
         <div className={styles.books__input__section}>
           <input
             type="text"
-            placeholder="Type Book name here"
+            placeholder="Type Book or Author's name here"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             onClick={() => setToggleViewMode(true)}
