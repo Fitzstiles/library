@@ -6,7 +6,7 @@ import SearchedBooks from "../componet/Searched";
 import axios from "axios";
 import { popular, BestSelling, Recommeded } from "../data";
 
-const Books = ({ results }) => {
+const Books = () => {
   const [search, setSearch] = useState("");
   const [bookData, setbookData] = useState();
   const [toggleViewMode, setToggleViewMode] = useState(false);

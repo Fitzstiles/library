@@ -6,6 +6,9 @@
 
 .book__container h1 {
     margin-left: 40px;
+    /* font-weight: 400; */
+    font-size: 16px;
+    color: #C15B33;
 }
 
 
@@ -93,6 +96,7 @@
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
+    overflow-x: hidden;
     overflow-y: scroll;
     height: 60%;
 }
@@ -180,7 +184,6 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    height: max-content;
     padding-bottom: 300px;
 }
 
