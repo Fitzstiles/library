@@ -57,6 +57,7 @@
     z-index: 1;
     right: 0;
     left: 0;
+    bottom: 0;
     top: 130px;
     color: black;
     transform: translateY(0);
@@ -166,9 +167,11 @@
     right: 0;
     left: 0;
     top: 0;
+    bottom: 0;
     color: black;
     transform: translateY(0);
     transition: .5s;
+    overflow-y: scroll;
 }
 
 .book__info {
@@ -177,8 +180,8 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    height: 70%;
-    overflow-y: scroll;
+    height: max-content;
+    padding-bottom: 300px;
 }
 
 .navigation {
@@ -187,6 +190,10 @@
     max-width: 90%;
     margin: auto;
     margin-top: 20px;
+}
+
+.navigation svg {
+    color: #C15B33;
 }
 
 .book__details__header {

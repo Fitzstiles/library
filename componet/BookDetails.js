@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const BookDetails = ({ toggleDetailsPage, close, bookData }) => {
   const [liked, setliked] = useState(false);
-  const contentClassName = toggleDetailsPage
+  const booksDetailsClassName = toggleDetailsPage
     ? styles.open__modal
     : styles.closed;
   const bookimg =
@@ -16,7 +16,7 @@ const BookDetails = ({ toggleDetailsPage, close, bookData }) => {
   const author = bookData?.volumeInfo.authors;
   console.log(bookData);
   return (
-    <div className={contentClassName}>
+    <div className={booksDetailsClassName}>
       <div className={styles.navigation}>
         <KeyboardBackspaceIcon onClick={close} />
         <div onClick={() => setliked(!liked)}>
@@ -34,7 +34,7 @@ const BookDetails = ({ toggleDetailsPage, close, bookData }) => {
             <p>{author}</p>
             <p>{bookData?.saleInfo.listPrice}</p>
             <p>Published: {bookData?.volumeInfo.publishedDate}</p>
-            <Link href={bookData?.volumeInfo.previewLink} target="blank">
+            <Link href={`${bookData?.volumeInfo.previewLink}`} target="blank">
               Click for more Details
             </Link>
           </div>
