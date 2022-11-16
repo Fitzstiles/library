@@ -3,6 +3,7 @@ import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useState } from "react";
+import Link from "next/link";
 
 const BookDetails = ({ toggleDetailsPage, close, bookData }) => {
   const [liked, setliked] = useState(false);
@@ -19,30 +20,30 @@ const BookDetails = ({ toggleDetailsPage, close, bookData }) => {
       <div className={styles.navigation}>
         <KeyboardBackspaceIcon onClick={close} />
         <div onClick={() => setliked(!liked)}>
-          {liked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+          {liked ? (
+            <FavoriteIcon style={{ color: "red" }} />
+          ) : (
+            <FavoriteBorderIcon />
+          )}
         </div>
       </div>
       <div className={styles.book__info}>
         <div className={styles.book__details__header}>
           <div>
-            <p>The greay Gatsby</p>
-            <p>F.Kenedddy Fitzgerald</p>
-            <p>$16.99</p>
+            <p>{bookData?.volumeInfo.title}</p>
+            <p>{author}</p>
+            <p>{bookData?.saleInfo.listPrice}</p>
+            <p>Published: {bookData?.volumeInfo.publishedDate}</p>
+            <Link href={bookData?.volumeInfo.previewLink} target="blank">
+              Click for more Details
+            </Link>
           </div>
           <div className={styles.book__details__image}>
             <img src={bookimg} alt="" />
           </div>
         </div>
         <div className={styles.paragraph}>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus
-            culpa numquam nobis ipsum repellat rem dolores aut debitis, nam
-            sint, excepturi, molestiae cum fuga voluptatibus possimus omnis
-            optio qui saepe! Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Nam eum numquam cumque odio laudantium architecto esse!
-            Dolorum quos temporibus, quae sapiente qui pariatur quisquam
-            suscipit quibusdam commodi aspernatur dolor nostrum.
-          </p>
+          <p>{bookData?.volumeInfo.description}</p>
         </div>
       </div>
     </div>
