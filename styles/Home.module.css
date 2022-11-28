@@ -128,15 +128,16 @@
     font-weight: bold;
 }
 
+@media screen and (min-width:700px) {
+    .login {
+        max-width: 700px;
+        margin: auto;
+    }
+}
 
 /* Styling the login page end */
 
 /* styling the input section */
-
-/* .background__image {
-    background-image: url('https://www.quoteambition.com/wp-content/uploads/2022/03/Best-Encouraging-Quotes.jpg?ezimgfmt=ng:webp/ngcb1');
-    height: 50px;
-} */
 
 .books__input__section {
     display: flex;
