@@ -4,7 +4,9 @@ import BookDetails from "./BookDetails";
 import { useState } from "react";
 
 const SearchedBooks = ({ toggleViewMode, close, bookData, search }) => {
-  const contentClassName = toggleViewMode ? styles.background : styles.closed;
+  const contentClassName = toggleViewMode
+    ? `${styles.background} && ${styles.closed}`
+    : styles.background;
   const [toggleDetailsPage, settoggleDetailsPage] = useState(false);
   const [bookItem, setItem] = useState();
   const HandleCloseOnClicked = () => {

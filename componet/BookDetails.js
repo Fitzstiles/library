@@ -8,8 +8,8 @@ import Link from "next/link";
 const BookDetails = ({ toggleDetailsPage, close, bookData }) => {
   const [liked, setliked] = useState(false);
   const booksDetailsClassName = toggleDetailsPage
-    ? styles.open__modal
-    : styles.closed;
+    ? `${styles.open__modal} && ${styles.active}`
+    : styles.open__modal;
   const bookimg =
     bookData?.volumeInfo?.imageLinks &&
     bookData?.volumeInfo?.imageLinks?.smallThumbnail;

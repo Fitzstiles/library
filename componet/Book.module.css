@@ -6,7 +6,6 @@
 
 .book__container h1 {
     margin-left: 40px;
-    /* font-weight: 400; */
     font-size: 16px;
     color: #C15B33;
 }
@@ -49,10 +48,6 @@
 
 /* styling the search books page */
 
-.closed {
-    transform: translateY(100vh);
-}
-
 .background {
     background-color: white;
     height: 100%;
@@ -63,9 +58,14 @@
     bottom: 0;
     top: 130px;
     color: black;
-    transform: translateY(0);
-    transition: .5s;
+    transform: translateY(200%);
+    transition: 1s;
 }
+
+.closed {
+    transform: translateY(0%);
+}
+
 
 .icon {
     background-color: white;
@@ -173,9 +173,13 @@
     top: 0;
     bottom: 0;
     color: black;
-    transform: translateY(0);
-    transition: .5s;
+    transform: translateY(200%);
+    transition: 1s;
     overflow-y: scroll;
+}
+
+.open__modal.active {
+    transform: translateY(0%);
 }
 
 .book__info {
@@ -234,6 +238,22 @@
 
     .paragraph {
         margin: 10px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .open__modal {
+        max-width: 640px;
+        margin: auto;
+    }
+}
+
+
+@media screen and (min-width:640px) {
+    .navigation {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
